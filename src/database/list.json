@@ -1,0 +1,11 @@
+{
+    "list":[
+        {"id": 1,"name": "Продукты", "colorId": 1},
+        {"id": 2,"name": "Покупки", "colorId": 2},
+        {"id": 3,"name": "Программирование", "colorId": 3},
+        {"id": 4,"name": "Учеба", "colorId": 4},
+        {"id": 5,"name": "Чтение", "colorId": 5},
+        {"id": 6,"name": "Спорт", "colorId": 6},
+        {"id": 7,"name": "Макс", "colorId": 6}
+    ]
+}

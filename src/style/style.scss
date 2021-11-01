@@ -1,8 +1,5 @@
 @import "./reset.scss";
 
-
-
-
 .todo{
     width: 100%;
     height: 100vh;
@@ -49,6 +46,7 @@
             padding: 10px;
             border-radius: 14px;
             margin: 10px 0 ;
+            cursor: pointer;
             p{
                 flex: 1 1 auto;
                 white-space: nowrap; /* Отменяем перенос текста */
@@ -62,6 +60,20 @@
             }
             &.active{
                 background-color: #FFFFFF;
+            }
+            span.remove{
+                opacity: 0;
+            }
+            &:hover{
+                background-color: #FFFFFF;
+                span.remove{
+                    opacity: 1;
+                    color: #7C7C7C;
+                    &:hover{
+                        opacity: 1;
+                        color: #000000;
+                    }
+                }
             }
         }
     }
@@ -81,6 +93,12 @@
             display: flex;
             justify-content: space-between;
             margin: 10px 0;
+            align-items: center;
+            li.active{
+                span{
+                    font-size: 28px;
+                }
+            }
         }
         button{
             padding: 8px;
@@ -88,6 +106,7 @@
             border: 1px solid #007E8C;
             border-radius: 10px;
             color: #FFFFFF;
+            text-align: center;
         }
         .highlight{
             position: absolute;
@@ -100,30 +119,44 @@
     }
     &__icon{
         color: #7C7C7C;
-        &.red{
-            color: #F44336;
-        }
-        &.purple{
-            color: #9C27B0;
-        }
-        &.indigo{
-            color: #3F51B5;
-        }
-        &.blue{
-            color: #2196F3;
-        }
-        &.green{
-            color: #4CAF50;
-        }
-        &.yellow{
-            color: #FFEB3B;
-        }
-        &.remove{
-            font-size: 0;
-        }
     }
     &__dashboard{
         grid-area: todo__dashboard;
         background-color: #FFFFFF;
+        padding: 50px 100px;
     }
+    &__title{
+        font-size: 36px;
+        span{
+            color: #7C7C7C;
+            margin-left: 5px;
+            font-size: 20px;
+            &:hover{
+                color: #000000;
+            }
+        }
+    }
+}
+
+
+.red{
+    color: #F44336;
+}
+.purple{
+    color: #9C27B0;
+}
+.indigo{
+    color: #3F51B5;
+}
+.blue{
+    color: #2196F3;
+}
+.green{
+    color: #4CAF50;
+}
+.yellow{
+    color: #FFEB3B;
+}
+.pointer{
+    cursor: pointer;
 }
